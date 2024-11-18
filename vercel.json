@@ -5,8 +5,10 @@
         "api/index.php": { "runtime": "vercel-php@0.6.0" }
     },
     "routes": [
-        { "src": "/build/(.*)", "dest": "/public/build/" },
-        { "src": "/(.*)", "dest": "/api/index.php" }
+        {
+            "src": "/(.*)",
+            "dest": "/api/index.php"
+        }
     ],
     "public": true,
     "buildCommand": "vite build",
@@ -14,7 +16,7 @@
     "env": {
         "APP_ENV": "production",
         "APP_DEBUG": "false",
-        "APP_URL": "https://gleamwheelsdb.com",
+        "APP_URL": "https://gleam-wheels-backend.vercel.app",
         "APP_KEY": "base64:rqu+G4KFSckXQBC7wqUXzaO76EnECHvgTE9szH6iu1s=",
         "APP_CONFIG_CACHE": "/tmp/config.php",
         "APP_EVENTS_CACHE": "/tmp/events.php",
