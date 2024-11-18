@@ -6,12 +6,16 @@
     },
     "routes": [
         {
+            "src": "/api/(.*)",
+            "dest": "/public/index.php"
+        },
+        {
             "src": "/(.*)",
-            "dest": "/api/index.php"
+            "dest": "/public/index.php"
         }
     ],
     "public": true,
-    "buildCommand": "vite build",
+    "buildCommand": null,
     "outputDirectory": "public",
     "env": {
         "APP_ENV": "production",
