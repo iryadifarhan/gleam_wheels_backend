@@ -34,7 +34,7 @@ class Place extends Model
     protected function imgSource(): Attribute
     {
         return Attribute::make(
-            get: fn ($value) => url('https://iryadifarhan.github.io/gleam_wheels/assetsImg/places/' . $value),
+            get: fn ($value) => url('https://iryadifarhan.github.io/gleam_wheels/assetsImg/places' . $value),
         );
     }
 
