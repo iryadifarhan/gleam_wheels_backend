@@ -57,4 +57,19 @@ class UserController extends Controller
         }
         return new GenericResource(false, 'Autologin Unsuccessful', "");
     }
+    
+    public function change_username(Request $request) 
+    {
+        $user = User::find($request->user_id);
+        $user->username = $request->username;
+        $user->save();
+
+        return new GenericResource(false, 'Username changed', $user);
+    }
+
+    public function getBookList($email)
+    {
+        $bookings = User::where('email', $email)->firstOrFail()->bookings;
+        return new GenericResource(true, 'List Booking from User', $bookings);
+    }
 }

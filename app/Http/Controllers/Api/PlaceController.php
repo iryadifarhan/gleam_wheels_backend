@@ -22,5 +22,10 @@ class PlaceController extends Controller
         // Return collection of places as a custom resource
         return new GenericResource(true, 'List Data Places', $places);
     }
-
+    
+    public function getBookList($name)
+    {
+        $bookings = Place::where('name', $name)->firstOrFail()->bookings;
+        return new GenericResource(true, 'List Booking from Place', $bookings);
+    }
 }

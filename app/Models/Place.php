@@ -5,6 +5,7 @@ namespace App\Models;
 use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Database\Eloquent\Model;
 use Illuminate\Database\Eloquent\Casts\Attribute;
+use App\Models\Booking;
 
 class Place extends Model
 {
@@ -26,6 +27,10 @@ class Place extends Model
         'features' => 'array',
     ];
     
+    public function bookings() {
+        return $this->hasMany(Booking::class);
+    }
+
     /**
      * image
      *

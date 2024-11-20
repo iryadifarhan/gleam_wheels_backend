@@ -15,6 +15,15 @@ DB_DATABASE=gleam_wheels
 DB_USERNAME=root
 DB_PASSWORD=
 
+ini kalo ke database online
+////
+DB_CONNECTION=mysql
+DB_HOST=n10pn.h.filess.io
+DB_PORT=3307
+DB_DATABASE=gleamwheels_shakingpen
+DB_USERNAME=gleamwheels_shakingpen
+DB_PASSWORD=eb73cf064f4ec9a81a231025ad0a787638a78d5d
+
 BROADCAST_DRIVER=log
 CACHE_DRIVER=file
 FILESYSTEM_DISK=local
