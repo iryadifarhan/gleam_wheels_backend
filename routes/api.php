@@ -23,6 +23,6 @@ Route::apiResource('/users', App\Http\Controllers\Api\UserController::class);
 Route::post('/users/login', [App\Http\Controllers\Api\UserController::class, 'login']);
 Route::post('/users/autologin', [App\Http\Controllers\Api\UserController::class, 'autologin']);
 Route::get('/getbooklist/place/{name}', [App\Http\Controllers\Api\PlaceController::class, 'getBookList']);
-Route::get('/getbooklist/user/{email}', [App\Http\Controllers\Api\UserController::class, 'getBookList']);
+Route::get('/getbooklist/user/{username}', [App\Http\Controllers\Api\UserController::class, 'getBookList']);
 Route::patch('/user/update', [App\Http\Controllers\Api\UserController::class, 'change_username']);
 Route::post('/booking', [App\Http\Controllers\Api\BookingController::class, 'store']);

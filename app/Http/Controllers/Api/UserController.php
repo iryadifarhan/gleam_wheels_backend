@@ -67,9 +67,9 @@ class UserController extends Controller
         return new GenericResource(false, 'Username changed', $user);
     }
 
-    public function getBookList($email)
+    public function getBookList($username)
     {
-        $bookings = User::where('email', $email)->firstOrFail()->bookings;
+        $bookings = User::where('username', $username)->firstOrFail()->bookings;
         return new GenericResource(true, 'List Booking from User', $bookings);
     }
 }
